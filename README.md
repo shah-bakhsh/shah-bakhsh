@@ -6,7 +6,7 @@
 <!-- DYNAMIC TYPING SVG -->
 <div align="center">
   <a href="https://github.com/shah-bakhsh">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=3000&pause=800&color=60A5FA&center=true&vCenter=true&width=820&height=44&lines=🚀+2%2C019%2B+Contributions+in+2026+%7C+Open+Source+Architect;🤖+Architecting+Autonomous+Agentic+AI+%26+Multi-Agent+Swarms;🧠+Enterprise+RAG+Pipelines+%C2%B7+LLM+Fine-Tuning+%C2%B7+Vision+AI;🤝+Available+for+AI+Engineering+Roles%2C+Contracts+%26+Collabs." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=3000&pause=800&color=60A5FA&center=true&vCenter=true&width=820&height=44&lines=2019%2B+Contributions+in+2026+--+Open+Source+Architect;Architecting+Autonomous+Agentic+AI+and+Multi-Agent+Swarms;Enterprise+RAG+Pipelines+and+LLM+Fine-Tuning;Available+for+AI+Engineering+Roles+and+Contracts." alt="Typing SVG" />
   </a>
 </div>
 
