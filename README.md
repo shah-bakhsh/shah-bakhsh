@@ -33,48 +33,9 @@
 
 <br/>
 
-<!-- ANIMATED CHAT SVG CONVERSATION -->
+<!-- ANIMATED CHAT CONVERSATION -->
 <div align="center">
-<svg width="550" height="250" viewBox="0 0 550 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .bubble-left { fill: #1e293b; rx: 14; }
-    .bubble-right { fill: #1e40af; rx: 14; }
-    text { fill: #f8fafc; font-size: 14px; font-family: 'JetBrains Mono', monospace, sans-serif; }
-    .sender { fill: #60a5fa; font-size: 11px; font-weight: bold; }
-    .typing { opacity: 0; animation: fade-in-out 1.5s infinite; }
-    .msg-1 { animation: msg-1 0.4s ease-out forwards; }
-    .msg-2 { opacity: 0; animation: msg-2 0.4s 1.5s ease-out forwards; }
-    .msg-3 { opacity: 0; animation: msg-3 0.4s 3.0s ease-out forwards; }
-    
-    @keyframes fade-in-out { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
-    @keyframes msg-1 { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes msg-2 { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes msg-3 { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-  </style>
-  
-  <rect width="550" height="250" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
-  
-  <!-- Message 1 -->
-  <g class="msg-1">
-    <rect x="20" y="20" width="340" height="55" rx="12" class="bubble-left"/>
-    <text x="32" y="38" class="sender">Recruiter / Client</text>
-    <text x="32" y="58">Hey Shah! What are you building in 2026?</text>
-  </g>
-  
-  <!-- Message 2 -->
-  <g class="msg-2">
-    <rect x="150" y="90" width="380" height="60" rx="12" class="bubble-right"/>
-    <text x="162" y="108" class="sender" fill="#93c5fd">Shah Bakhsh (AI Engineer)</text>
-    <text x="162" y="130">Building Agentic AI & RAG with 2,019+ commits! 🤖</text>
-  </g>
-
-  <!-- Message 3 -->
-  <g class="msg-3">
-    <rect x="20" y="165" width="380" height="55" rx="12" class="bubble-left"/>
-    <text x="32" y="183" class="sender">Collaborator</text>
-    <text x="32" y="203">Awesome! Let's connect & build together 🚀</text>
-  </g>
-</svg>
+  <img src="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/main/chat.svg" alt="Chat Conversation" />
 </div>
 
 <br/>
