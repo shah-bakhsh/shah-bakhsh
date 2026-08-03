@@ -115,6 +115,18 @@
 
 <br/>
 
+## 🐍 Contribution Snake Animation
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/output/github-contribution-grid-snake.svg" />
+    <img alt="Contribution Snake Animation" src="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/output/github-contribution-grid-snake-dark.svg" />
+  </picture>
+</div>
+
+<br/>
+
 ---
 
 ## 🧠 Core AI Engineering Architecture
