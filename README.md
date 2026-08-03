@@ -12,11 +12,11 @@
 
 <br/>
 
-<!-- METRICS HIGHLIGHT BAR -->
+<!-- GUARANTEED HIGH-UPTIME METRICS & BADGES BAR -->
 <div align="center">
-  <a href="https://github.com/shah-bakhsh"><img src="https://img.shields.io/badge/🔥_2,019%2B_Contributions-Last_Year-3b82f6?style=for-the-badge&logo=github&logoColor=white" alt="Contributions" /></a>
-  <a href="https://github.com/shah-bakhsh?tab=repositories"><img src="https://img.shields.io/badge/⚡_11%2B_Projects-Open_Source-1e3a8a?style=for-the-badge&logo=git&logoColor=white" alt="Repositories" /></a>
-  <a href="https://shahbakhsh.vercel.app/"><img src="https://img.shields.io/badge/🌐_Live_Portfolio-shahbakhsh.vercel.app-0284c7?style=for-the-badge&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://github.com/shah-bakhsh"><img src="https://img.shields.io/badge/🔥_Contributions-2,019%2B_in_2026-3b82f6?style=for-the-badge&logo=github&logoColor=white" alt="2019+ Contributions" /></a>
+  <a href="https://github.com/shah-bakhsh?tab=repositories"><img src="https://img.shields.io/badge/⚡_Projects-11%2B_Open_Source-1e3a8a?style=for-the-badge&logo=git&logoColor=white" alt="11+ Projects" /></a>
+  <a href="https://shahbakhsh.vercel.app/"><img src="https://img.shields.io/badge/🌐_Portfolio-shahbakhsh.vercel.app-0284c7?style=for-the-badge&logoColor=white" alt="Portfolio" /></a>
   <a href="https://linkedin.com/in/shah-bakhsh"><img src="https://img.shields.io/badge/LinkedIn-Shah_Bakhsh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </div>
 
@@ -24,12 +24,16 @@
 
 ---
 
-<!-- SYSTEM MANIFEST & PHILOSOPHY -->
+<!-- SYSTEM MANIFEST -->
 ```json
 {
   "engineer": "Shah Bakhsh",
   "title": "AI Engineer & Intelligent Systems Architect",
-  "impact_2026": "2,019+ Contributions across AI, ML, NLP & Web Applications",
+  "impact_metrics": {
+    "total_contributions_2026": "2,019+ Commits & Code Activity",
+    "public_repositories": "11 Projects",
+    "certifications": "6 Professional Accreditations"
+  },
   "specialization": [
     "Autonomous Multi-Agent Orchestration (LangGraph, CrewAI, AutoGen)",
     "Production-Grade Retrieval-Augmented Generation (RAG) & Vector Intelligence",
@@ -41,6 +45,45 @@
   "status": "🟢 Available for High-Impact AI Engineering Roles & Strategic Collaborations"
 }
 ```
+
+---
+
+## 📊 Performance & Contribution Dashboard
+
+<table width="100%">
+<tr>
+<td width="50%" align="center" valign="top">
+
+### ⚡ 2026 Impact Summary
+| Metric | Value |
+| :--- | :--- |
+| 🚀 **Total Contributions** | **2,019+ Commits** |
+| 🛠️ **Public Repositories** | **11 Projects** |
+| 🎓 **Certifications** | **6 Accreditations** |
+| 🤖 **Core Focus** | **Agentic AI & RAG** |
+| 🌐 **Primary Stack** | **Python, TypeScript, C++** |
+
+</td>
+<td width="50%" align="center" valign="top">
+
+### 🏆 Specialization Highlights
+* 🔹 **Autonomous Agents:** Multi-agent workflows with LangGraph & CrewAI
+* 🔹 **RAG Architecture:** Vector retrieval with Pinecone & ChromaDB
+* 🔹 **Computer Vision:** Real-time OpenCV & Deep Learning
+* 🔹 **MLOps:** FastAPI serving & Docker containerization
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- DYNAMIC ACTIVITY GRAPH -->
+<div align="center">
+  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=shah-bakhsh&theme=tokyo-night&hide_border=true&bg_color=07070e&color=60a5fa&line=3b82f6&point=60a5fa&area=true&area_color=1e3a8a" alt="Shah Bakhsh GitHub Activity Graph" />
+</div>
+
+<br/>
 
 ---
 
@@ -205,36 +248,13 @@ High-precision real-time face mask classification system developed for access co
 
 ---
 
-## 📈 GitHub Analytics & 2,019+ Contributions Overview
-
-> Note: All commit metrics below include both public & private contributions across 2026.
-
-<div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=shah-bakhsh&show_icons=true&theme=tokyonight&hide_border=true&bg_color=07070e&title_color=60a5fa&icon_color=60a5fa&text_color=ededfc&include_all_commits=true&count_private=true" />
-  <img width="49%" src="https://streak-stats.demolab.com?user=shah-bakhsh&theme=tokyonight&hide_border=true&background=07070e&ring=60a5fa&fire=3b82f6&currStreakLabel=60a5fa&sideLabels=ededfc&dates=7878a8&stroke=1e3a8a" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=shah-bakhsh&theme=tokyo-night&hide_border=true&bg_color=07070e&color=60a5fa&line=3b82f6&point=60a5fa&area=true&area_color=1e3a8a" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img width="50%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shah-bakhsh&layout=compact&theme=tokyonight&hide_border=true&bg_color=07070e&title_color=60a5fa&text_color=ededfc&langs_count=8&count_private=true" />
-</div>
-
----
-
-## 🐍 Interactive Contribution Snake Game
+## 🐍 Contribution Snake Animation
 
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/output/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/output/github-contribution-grid-snake.svg" />
-    <img alt="Contribution Snake" src="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/output/github-contribution-grid-snake-dark.svg" />
+    <img alt="Contribution Snake Animation" src="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/output/github-contribution-grid-snake-dark.svg" />
   </picture>
 </div>
 
