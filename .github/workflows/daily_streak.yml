@@ -1,0 +1,28 @@
+name: Daily Streak Keeper
+
+on:
+  schedule:
+    - cron: "50 23 * * *" # Runs every day at 11:50 PM UTC (Ensures daily green tile)
+  workflow_dispatch:     # Allows manual trigger anytime
+
+jobs:
+  keep-streak:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Update Daily Streak Log
+        run: |
+          date -u +"%Y-%m-%d %H:%M:%S UTC" >> streak.log
+
+      - name: Commit and Push Daily Streak
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add streak.log
+          git commit -m "chore: keep daily contribution streak active [streak-bot]" || exit 0
+          git push
