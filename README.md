@@ -1,75 +1,95 @@
-<!-- HEADER BANNER & GREETING -->
+<!-- HEADER BANNER -->
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:07070e,25:0f172a,60:1e3a8a,100:2563eb&height=250&section=header&text=Shah%20Bakhsh&fontSize=62&fontFamily=Syne&fontColor=ffffff&fontAlignY=36&desc=AI%20Engineer%20%E2%80%94%20LLMs%20%C2%B7%20RAG%20%C2%B7%20Agentic%20AI%20%C2%B7%20MLOps&descAlignY=58&descSize=19&descColor=60a5fa&animation=fadeIn" />
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:07070e,25:0f172a,60:1e3a8a,100:2563eb&height=240&section=header&text=Shah%20Bakhsh&fontSize=60&fontFamily=Syne&fontColor=ffffff&fontAlignY=36&desc=AI%20Engineer%20%E2%80%94%20LLMs%20%C2%B7%20RAG%20%C2%B7%20Agentic%20AI%20%C2%B7%20MLOps&descAlignY=58&descSize=19&descColor=60a5fa&animation=fadeIn" />
 </div>
 
-<h1 align="center">Hi there 👋 I'm Shah Bakhsh</h1>
-<h3 align="center">🤖 AI Engineer & Autonomous Systems Architect</h3>
-
-<p align="center">
-  <b>🔥 2,019+ Contributions in 2026</b> &nbsp;|&nbsp; 
-  <b>⚡ 11 Open-Source Repositories</b> &nbsp;|&nbsp; 
-  <b>💻 GitHub Developer Program Member</b>
-</p>
-
-<!-- FOLLOW & SOCIAL BADGES -->
-<p align="center">
-  <a href="https://github.com/shah-bakhsh?tab=followers">
-    <img alt="GitHub Followers" src="https://img.shields.io/github/followers/shah-bakhsh?label=Follow&style=for-the-badge&logo=github&logoColor=white&color=0052CC" />
-  </a>
-  <a href="https://github.com/shah-bakhsh?tab=repositories">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/shah-bakhsh?style=for-the-badge&logo=github&logoColor=black&color=FFD700" />
-  </a>
-  <a href="https://shahbakhsh.vercel.app/">
-    <img alt="Portfolio" src="https://img.shields.io/badge/🌐_Portfolio-shahbakhsh.vercel.app-0284c7?style=for-the-badge&logoColor=white" />
-  </a>
-  <a href="https://linkedin.com/in/shah-bakhsh">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Shah_Bakhsh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:shahbakhshtech@gmail.com">
-    <img alt="Email" src="https://img.shields.io/badge/✉️_Contact-shahbakhshtech%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-</p>
-
 <!-- DYNAMIC TYPING SVG -->
-<p align="center">
+<div align="center">
   <a href="https://github.com/shah-bakhsh">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=18&duration=3000&pause=800&color=60A5FA&center=true&vCenter=true&width=820&height=44&lines=2019%2B+Contributions+in+2026+--+Open+Source+Architect;Architecting+Autonomous+Agentic+AI+and+Multi-Agent+Swarms;Enterprise+RAG+Pipelines+and+LLM+Fine-Tuning;Available+for+AI+Engineering+Roles+and+Contracts." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=3000&pause=800&color=60A5FA&center=true&vCenter=true&width=820&height=44&lines=2019%2B+Contributions+in+2026+--+Open+Source+Architect;Architecting+Autonomous+Agentic+AI+and+Multi-Agent+Swarms;Enterprise+RAG+Pipelines+and+LLM+Fine-Tuning;Available+for+AI+Engineering+Roles+and+Contracts." alt="Typing SVG" />
   </a>
-</p>
+</div>
+
+<br/>
+
+<!-- QUICK ACCESS LINKS -->
+<div align="center">
+  <a href="https://shahbakhsh.vercel.app/"><img src="https://img.shields.io/badge/🌐_Live_Portfolio-shahbakhsh.vercel.app-0284c7?style=for-the-badge&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://linkedin.com/in/shah-bakhsh"><img src="https://img.shields.io/badge/LinkedIn-Shah_Bakhsh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://huggingface.co/shah-bakhsh"><img src="https://img.shields.io/badge/HuggingFace-shah--bakhsh-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="HuggingFace" /></a>
+  <a href="https://kaggle.com/shahbakhsh"><img src="https://img.shields.io/badge/Kaggle-shahbakhsh-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle" /></a>
+  <a href="mailto:shahbakhshtech@gmail.com"><img src="https://img.shields.io/badge/✉️_Contact-shahbakhshtech%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Contact" /></a>
+</div>
+
+<br/>
+
+<!-- TECHNICAL IMPACT BADGES -->
+<div align="center">
+  <img src="https://img.shields.io/badge/🔥_Impact-2,019%2B_Annual_Contributions-3b82f6?style=flat-square&logo=github&logoColor=white" alt="Contributions" />
+  <img src="https://img.shields.io/badge/⚡_Repositories-11_Open_Source_Systems-1e3a8a?style=flat-square&logo=git&logoColor=white" alt="Repos" />
+  <img src="https://img.shields.io/badge/💻_Program-GitHub_Developer_Member-0284c7?style=flat-square&logo=github&logoColor=white" alt="Dev Program" />
+  <img src="https://img.shields.io/badge/🏅_Achievement-Pair_Extraordinaire-8b5cf6?style=flat-square&logo=github&logoColor=white" alt="Pair Extraordinaire" />
+</div>
+
+<br/>
 
 ---
 
-## 📌 About Me
+<!-- TERMINAL MACOS MOCKUP SYSTEM CONSOLE -->
+<table width="100%">
+<tr>
+<td bgcolor="#0d1117" style="border: 1px solid #30363d; border-radius: 8px; padding: 14px;">
+<div style="font-family: monospace; color: #8b949e; margin-bottom: 8px;">
+  <span style="color: #ff5f56;">●</span> <span style="color: #ffbd2e;">●</span> <span style="color: #27c93f;">●</span> &nbsp; <b>shah-bakhsh-os ~ v2026.8</b>
+</div>
 
-- 😄 **Focus:** AI Engineering, Agentic AI, LLM Fine-Tuning, Production RAG Systems & MLOps
-- 🔭 **Currently Building:** Autonomous Multi-Agent Workflows using **LangGraph**, **CrewAI**, & **FastAPI**
-- 🌱 **Currently Learning:** Model Context Protocol (MCP), Scalable Multi-Agent Swarms & Self-Correction Loops
-- 👯 **Looking to Collaborate on:** Open Source AI Frameworks, RAG Architectures, Agent Protocol & Vision AI
-- 💬 **Ask me about:** LLM Prompt Engineering, Vector Databases (Pinecone/ChromaDB), OpenCV, PyTorch & TensorFlow
+```json
+{
+  "engineer": "Shah Bakhsh",
+  "role": "AI Engineer & Autonomous Systems Architect",
+  "location": "Pakistan",
+  "email": "shahbakhshtech@gmail.com",
+  "2026_impact": {
+    "annual_contributions": "2,019+ Commits & Code Activity",
+    "public_repositories": "11 Projects",
+    "certifications": "6 Verified AI/ML Accreditations"
+  },
+  "core_competencies": [
+    "Autonomous Multi-Agent Swarms & State Machine Orchestration (LangGraph, CrewAI)",
+    "Enterprise RAG Pipelines & Vector DB Architectures (Pinecone, ChromaDB, FAISS)",
+    "LLM Fine-Tuning (PEFT, LoRA, QLoRA) & Context Optimization",
+    "Real-Time Computer Vision & Multimodal Deep Learning (OpenCV, PyTorch)",
+    "Production MLOps Pipelines, FastAPI Serving & Docker Deployments"
+  ],
+  "current_research": "Model Context Protocol (MCP), Autonomous Self-Correction & Multi-Agent Swarms",
+  "status": "🟢 Available for High-Impact AI Roles, Technical Advisory & Consulting"
+}
+```
+</td>
+</tr>
+</table>
 
 ---
 
-<details open>
-<summary><h2>⚡ 2026 Impact & Performance Dashboard</h2></summary>
+## ⚡ Executive Performance Dashboard
 
 <table width="100%">
 <tr>
 <td width="50%" align="center" valign="top">
 
-### 📊 Contribution Metrics
+### 🚀 2026 Contribution Metrics
 | Dimension | Real-Time Status |
 | :--- | :--- |
 | 🔥 **Annual Contributions** | **2,019+ Commits** |
-| ⚡ **Public Repositories** | **11 Projects** |
+| ⚡ **Open Source Projects** | **11 Repositories** |
 | 🎓 **Verified Certifications** | **6 Accreditations** |
-| 💻 **Dev Program** | **GitHub Member** |
-| 🏅 **Achievement** | **Pair Extraordinaire** |
+| 🤖 **Domain Focus** | **Agentic AI & RAG** |
+| 💼 **Availability** | **Open for Hiring & Projects** |
 
 </td>
 <td width="50%" align="center" valign="top">
 
-### 🎯 Specialization Highlights
+### 🎯 Engineering Highlights
 * 🔹 **Autonomous Swarms:** Multi-agent workflows with LangGraph & CrewAI
 * 🔹 **RAG Architecture:** High-precision vector search & re-ranking
 * 🔹 **Computer Vision:** Live camera video stream face tracking & classification
@@ -82,74 +102,103 @@
 <br/>
 
 <!-- DYNAMIC ACTIVITY GRAPH -->
-<p align="center">
-  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=shah-bakhsh&theme=tokyo-night&hide_border=true&bg_color=07070e&color=60a5fa&line=3b82f6&point=60a5fa&area=true&area_color=1e3a8a" alt="Shah Bakhsh GitHub Activity Graph" />
-</p>
-
-</details>
-
----
-
-<details open>
-<summary><h2>🛠️ Languages, AI Frameworks & Tools</h2></summary>
-
-<br/>
-
 <div align="center">
-
-<!-- SKILLICONS DYNAMIC BADGES GRID -->
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=python,ts,js,cpp,py,pytorch,tensorflow,docker,postgres,git,vscode,nextjs,html,css,bash,mongodb&perline=8" />
-</a>
-
+  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=shah-bakhsh&theme=tokyo-night&hide_border=true&bg_color=07070e&color=60a5fa&line=3b82f6&point=60a5fa&area=true&area_color=1e3a8a" alt="Shah Bakhsh GitHub Activity Graph" />
 </div>
 
 <br/>
 
-### 👨‍💻 Detailed Ecosystem Breakdown
+---
+
+## 🧠 Core AI Engineering Architecture
 
 <table width="100%">
 <tr>
 <td width="50%" valign="top">
 
-#### 🚀 Programming Languages
-* **Python** (PyTorch, TensorFlow, OpenCV, FastAPI, Pandas, NumPy)
-* **TypeScript / JavaScript** (Next.js, Node.js, React)
-* **C++** (High-performance algorithms)
-* **SQL** (PostgreSQL, SQLite, Vector search)
-
-#### 🤖 Agentic AI & LLMs
-* **LangChain & LangGraph** (Multi-agent state machines & tool calling)
-* **CrewAI & AutoGen** (Role-based autonomous agent swarms)
-* **HuggingFace & Transformers** (Model evaluation & PEFT/LoRA fine-tuning)
-* **Ollama & OpenAI API** (Local & cloud model inference)
+### 🤖 Agentic AI & Multi-Agent Frameworks
+* **Orchestration:** LangGraph, CrewAI, AutoGen, LangChain.
+* **Capabilities:** Multi-agent state machines, autonomous tool selection, persistent long-term memory, self-correction loops & human-in-the-loop validation.
+* **Observability & Tracing:** LangSmith, DeepEval, Phoenix RAG evaluation.
 
 </td>
 <td width="50%" valign="top">
 
-#### 💾 Vector DBs & Information Retrieval
-* **Pinecone & ChromaDB** (Production vector stores)
-* **FAISS & Qdrant** (Similarity search & indexing)
-* **RAGAS Framework** (RAG precision, recall & hallucination scoring)
+### 🧠 LLMs & Advanced RAG Systems
+* **Architecture:** Hybrid RAG, HyDE (Hypothetical Document Embeddings), Re-ranking, Context Compression & Semantic Chunking.
+* **Vector Databases:** Pinecone, ChromaDB, FAISS, Qdrant, PostgreSQL (`pgvector`).
+* **Evaluation:** RAGAS framework for precision, recall, and hallucination containment.
 
-#### 📦 MLOps & Production Tools
-* **Docker** (Containerization & reproducible environments)
-* **FastAPI & Streamlit** (Low-latency REST APIs & interactive dashboards)
-* **GitHub Actions** (CI/CD automated testing & deployments)
-* **Git** (Version control & repository management)
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 👁️ Computer Vision & Multimodal Deep Learning
+* **Stack:** OpenCV, PyTorch, TensorFlow, MobileNetV2, CNNs, YOLO.
+* **Applications:** Real-time face recognition attendance logging, mask detection access control, and live video stream analysis.
+
+</td>
+<td width="50%" valign="top">
+
+### ⚙️ MLOps, Cloud & Production Delivery
+* **Backend:** FastAPI, Streamlit, Next.js, Node.js, Python.
+* **DevOps:** Docker, GitHub Actions CI/CD pipelines, Git version control.
+* **Reliability:** Data drift monitoring, REST microservices, low-latency inferencing & production deployments.
 
 </td>
 </tr>
 </table>
 
-</details>
+---
+
+## 🛠️ Technical Stack & Frameworks
+
+<div align="left">
+
+#### 🚀 Programming Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+
+#### 🤖 AI, Machine Learning & Deep Learning
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+
+#### 🧠 LLMs, GenAI & Multi-Agent Frameworks
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
+![CrewAI](https://img.shields.io/badge/CrewAI-FF0000?style=for-the-badge&logoColor=white)
+![AutoGen](https://img.shields.io/badge/AutoGen-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
+
+#### 💾 Vector Databases & Storage
+![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6B35?style=for-the-badge&logoColor=white)
+![FAISS](https://img.shields.io/badge/FAISS-0467DF?style=for-the-badge&logo=meta&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+
+#### 📦 MLOps, Infrastructure & Web Tools
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+
+</div>
 
 ---
 
-<details open>
-<summary><h2>⭐ Featured Flagship Projects</h2></summary>
-
-<br/>
+## ⭐ Featured Flagship Projects
 
 <table width="100%">
 <tr>
@@ -220,14 +269,9 @@ High-precision real-time face mask classification system developed for access co
 </tr>
 </table>
 
-</details>
-
 ---
 
-<details open>
-<summary><h2>📜 Verified Professional Certifications</h2></summary>
-
-<br/>
+## 📜 Verified Professional Certifications
 
 <div align="center">
   <img src="https://img.shields.io/badge/Machine_Learning_Specialization-Coursera_%2F_DeepLearning.AI-0056D2?style=flat-square&logo=coursera&logoColor=white" alt="ML Specialization" />
@@ -238,26 +282,16 @@ High-precision real-time face mask classification system developed for access co
   <img src="https://img.shields.io/badge/Generative_AI_Certificate-LinkedIn_Learning-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="GenAI Certificate" />
 </div>
 
-</details>
-
 ---
 
-## 📫 Let's Connect & Collaborate
+## 📫 Let's Connect
 
 <div align="center">
-
-<p align="center">
-  <a href="https://twitter.com/shahbakhshtech"><img width="34px" alt="Twitter" title="Twitter" src="https://i.imgur.com/OXZM1L6.png"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="https://linkedin.com/in/shah-bakhsh"><img width="34px" alt="LinkedIn" title="LinkedIn" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="https://huggingface.co/shah-bakhsh"><img width="34px" alt="HuggingFace" title="HuggingFace" src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="https://kaggle.com/shahbakhsh"><img width="34px" alt="Kaggle" title="Kaggle" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="mailto:shahbakhshtech@gmail.com"><img width="34px" alt="Email" title="Email" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/gmail.svg"/></a>
-</p>
-
+  <a href="https://github.com/shah-bakhsh"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://linkedin.com/in/shah-bakhsh"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://huggingface.co/shah-bakhsh"><img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" /></a>
+  <a href="https://kaggle.com/shahbakhsh"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" /></a>
+  <a href="mailto:shahbakhshtech@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </div>
 
 <br/>
