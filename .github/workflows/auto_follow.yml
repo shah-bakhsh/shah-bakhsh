@@ -1,0 +1,35 @@
+name: Daily Auto-Follow AI Developers
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # Runs every day at 06:00 AM UTC
+  workflow_dispatch:     # Allows manual trigger anytime from GitHub Actions tab
+
+jobs:
+  auto-follow:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Run Auto-Follower Script
+        env:
+          GITHUB_TOKEN: ${{ secrets.AUTO_FOLLOW_PAT }}
+        run: |
+          python scripts/auto_follow_ai_devs.py --limit 30
+
+      - name: Commit & Push Follow History
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add followed_users.json || true
+          git commit -m "chore: update followed_users.json history [skip ci]" || true
+          git push
