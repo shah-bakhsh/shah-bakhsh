@@ -1,6 +1,6 @@
-<!-- ULTIMATE VIP HEADER BANNER -->
+<!-- HEADER BANNER -->
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:07070e,25:0f172a,60:1e3a8a,100:2563eb&height=250&section=header&text=Shah%20Bakhsh&fontSize=64&fontFamily=Syne&fontColor=ffffff&fontAlignY=36&desc=AI%20Engineer%20%E2%80%94%20LLMs%20%C2%B7%20RAG%20%C2%B7%20Agentic%20AI%20%C2%B7%20MLOps&descAlignY=58&descSize=19&descColor=60a5fa&animation=fadeIn" />
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:07070e,25:0f172a,60:1e3a8a,100:2563eb&height=240&section=header&text=Shah%20Bakhsh&fontSize=60&fontFamily=Syne&fontColor=ffffff&fontAlignY=36&desc=AI%20Engineer%20%E2%80%94%20LLMs%20%C2%B7%20RAG%20%C2%B7%20Agentic%20AI%20%C2%B7%20MLOps&descAlignY=58&descSize=19&descColor=60a5fa&animation=fadeIn" />
 </div>
 
 <!-- DYNAMIC TYPING SVG -->
@@ -12,18 +12,18 @@
 
 <br/>
 
-<!-- VIP HERO CALL-TO-ACTION BAR -->
+<!-- QUICK ACCESS & SOCIAL LINKS -->
 <div align="center">
-  <a href="https://github.com/shah-bakhsh?tab=followers"><img src="https://img.shields.io/badge/➕_Follow_@shah--bakhsh-0052CC?style=for-the-badge&logo=github&logoColor=white" alt="Follow" /></a>
-  <a href="https://github.com/shah-bakhsh?tab=repositories"><img src="https://img.shields.io/badge/⭐_Star_Projects-11%2B_Repos-FFD700?style=for-the-badge&logo=github&logoColor=black" alt="Star Projects" /></a>
   <a href="https://shahbakhsh.vercel.app/"><img src="https://img.shields.io/badge/🌐_Live_Portfolio-shahbakhsh.vercel.app-0284c7?style=for-the-badge&logoColor=white" alt="Portfolio" /></a>
   <a href="https://linkedin.com/in/shah-bakhsh"><img src="https://img.shields.io/badge/LinkedIn-Shah_Bakhsh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:shahbakhshtech@gmail.com"><img src="https://img.shields.io/badge/✉️_Hire_%2F_Contact-shahbakhshtech%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Contact" /></a>
+  <a href="https://huggingface.co/shah-bakhsh"><img src="https://img.shields.io/badge/HuggingFace-shah--bakhsh-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="HuggingFace" /></a>
+  <a href="https://kaggle.com/shahbakhsh"><img src="https://img.shields.io/badge/Kaggle-shahbakhsh-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle" /></a>
+  <a href="mailto:shahbakhshtech@gmail.com"><img src="https://img.shields.io/badge/✉️_Contact-shahbakhshtech%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Contact" /></a>
 </div>
 
 <br/>
 
-<!-- VIP IMPACT BADGES -->
+<!-- TECHNICAL IMPACT BADGES -->
 <div align="center">
   <img src="https://img.shields.io/badge/🔥_Impact-2,019%2B_Annual_Contributions-3b82f6?style=flat-square&logo=github&logoColor=white" alt="Contributions" />
   <img src="https://img.shields.io/badge/⚡_Repositories-11_Open_Source_Systems-1e3a8a?style=flat-square&logo=git&logoColor=white" alt="Repos" />
@@ -40,7 +40,7 @@
 <tr>
 <td bgcolor="#0d1117" style="border: 1px solid #30363d; border-radius: 8px; padding: 12px;">
 <div style="font-family: monospace; color: #8b949e; margin-bottom: 8px;">
-  <span style="color: #ff5f56;">●</span> <span style="color: #ffbd2e;">●</span> <span style="color: #27c93f;">●</span> &nbsp; <b>shah-bakhsh-os ~ v2026.8 [VIP EDITION]</b>
+  <span style="color: #ff5f56;">●</span> <span style="color: #ffbd2e;">●</span> <span style="color: #27c93f;">●</span> &nbsp; <b>shah-bakhsh-os ~ v2026.8</b>
 </div>
 
 ```json
@@ -71,7 +71,7 @@
 
 ---
 
-## ⚡ VIP Performance Dashboard
+## ⚡ Performance & Contribution Overview
 
 <table width="100%">
 <tr>
@@ -152,7 +152,7 @@
 
 ---
 
-## 🛠️ Complete VIP Tech Stack
+## 🛠️ Tech Stack & Toolkit
 
 <div align="left">
 
@@ -209,7 +209,7 @@
 
 Autonomous multi-step AI assistant with persistent memory, custom tool invocation, and multi-tier reasoning chains for complex tasks.
 
-[![View Repository](https://img.shields.io/badge/⭐_Star_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/zirak-ai)
+[![View Repository](https://img.shields.io/badge/View_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/zirak-ai)
 
 </td>
 <td width="50%" valign="top">
@@ -219,7 +219,7 @@ Autonomous multi-step AI assistant with persistent memory, custom tool invocatio
 
 Specialized AI agent system designed for Balochi natural language processing, OCR document extraction, and dialect translation.
 
-[![View Repository](https://img.shields.io/badge/⭐_Star_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/balochi-ai-agent)
+[![View Repository](https://img.shields.io/badge/View_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/balochi-ai-agent)
 
 </td>
 </tr>
@@ -231,7 +231,7 @@ Specialized AI agent system designed for Balochi natural language processing, OC
 
 Intelligent pathfinding and navigation agent leveraging graph search optimization and real-time decision models.
 
-[![View Repository](https://img.shields.io/badge/⭐_Star_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/pathpilot-ai)
+[![View Repository](https://img.shields.io/badge/View_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/pathpilot-ai)
 
 </td>
 <td width="50%" valign="top">
@@ -241,7 +241,7 @@ Intelligent pathfinding and navigation agent leveraging graph search optimizatio
 
 Automated real-time attendance system using facial detection algorithms. Logs camera stream identities automatically.
 
-[![View Repository](https://img.shields.io/badge/⭐_Star_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/face-recognition-attendance)
+[![View Repository](https://img.shields.io/badge/View_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/face-recognition-attendance)
 
 </td>
 </tr>
@@ -253,7 +253,7 @@ Automated real-time attendance system using facial detection algorithms. Logs ca
 
 Transformer-based NLP system with a real-time phishing URL detection engine classifying malicious web URLs to block attacks.
 
-[![View Repository](https://img.shields.io/badge/⭐_Star_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/zrah)
+[![View Repository](https://img.shields.io/badge/View_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/zrah)
 
 </td>
 <td width="50%" valign="top">
@@ -263,40 +263,11 @@ Transformer-based NLP system with a real-time phishing URL detection engine clas
 
 High-precision real-time face mask classification system developed for access control & public safety compliance.
 
-[![View Repository](https://img.shields.io/badge/⭐_Star_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/face-mask-detector-ai)
+[![View Repository](https://img.shields.io/badge/View_Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shah-bakhsh/face-mask-detector-ai)
 
 </td>
 </tr>
 </table>
-
----
-
-## 🐍 Contribution Snake Animation
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/output/github-contribution-grid-snake.svg" />
-    <img alt="Contribution Snake Animation" src="https://raw.githubusercontent.com/shah-bakhsh/shah-bakhsh/output/github-contribution-grid-snake-dark.svg" />
-  </picture>
-</div>
-
----
-
-## 🤝 Why Follow & Collaborate?
-
-<div align="center">
-
-| 🚀 For Open-Source Contributors | 💼 For Employers & Clients | 🤝 For Fellow Engineers |
-| :--- | :--- | :--- |
-| Feel free to fork my repositories, submit Pull Requests, or star projects you find helpful! | Available for full-time **AI Engineering roles**, contract projects, and AI system architecture consulting. | Let's build cutting-edge agentic workflows, RAG systems, and AI tools together. |
-
-<br/>
-
-[![Follow @shah-bakhsh](https://img.shields.io/badge/➕_Follow_@shah--bakhsh_on_GitHub-0052CC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/shah-bakhsh?tab=followers)
-[![Email Shah Bakhsh](https://img.shields.io/badge/✉️_Get_In_Touch-shahbakhshtech%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shahbakhshtech@gmail.com)
-
-</div>
 
 ---
 
@@ -327,5 +298,5 @@ High-precision real-time face mask classification system developed for access co
 
 <!-- FOOTER WAVE BANNER -->
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:3b82f6,50:1e3a8a,100:07070e&height=125&section=footer&text=Join%20Me%20In%20Building%20The%20Future%20Of%20AI%20%E2%80%A2%20Click%20Follow%20Above!&fontSize=16&fontColor=93c5fd&fontAlignY=65&animation=fadeIn" />
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:3b82f6,50:1e3a8a,100:07070e&height=120&section=footer&text=Building%20The%20Future%20Of%20Artificial%20Intelligence&fontSize=16&fontColor=93c5fd&fontAlignY=65&animation=fadeIn" />
 </div>
