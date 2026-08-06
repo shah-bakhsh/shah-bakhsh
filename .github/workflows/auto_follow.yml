@@ -2,8 +2,8 @@ name: Daily Auto-Follow AI Developers
 
 on:
   schedule:
-    - cron: "0 6 * * *" # Runs every day at 06:00 AM UTC
-  workflow_dispatch:     # Allows manual trigger anytime from GitHub Actions tab
+    - cron: "0 6 * * *"     # Runs every day at 06:00 AM UTC
+  workflow_dispatch:          # Allows manual trigger from GitHub Actions tab
 
 jobs:
   auto-follow:
@@ -14,22 +14,28 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.AUTO_FOLLOW_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
+      - name: Pull latest changes
+        run: |
+          git pull origin main || true
+
       - name: Run Auto-Follower Script
         env:
-          GITHUB_TOKEN: ${{ secrets.AUTO_FOLLOW_PAT }}
+          GITHUB_TOKEN: ${{ secrets.AUTO_FOLLOW_TOKEN }}
         run: |
-          python scripts/auto_follow_ai_devs.py --limit 30
+          python scripts/auto_follow_ai_devs.py --limit 50
 
-      - name: Commit & Push Follow History
+      - name: Commit updated history
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add followed_users.json || true
-          git commit -m "chore: update followed_users.json history [skip ci]" || true
-          git push
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add followed_users.json
+          git diff --staged --quiet || git commit -m "chore: update followed_users.json [auto-follow-bot]"
+          git push origin main || echo "Nothing to push"
