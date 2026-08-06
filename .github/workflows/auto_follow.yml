@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.AUTO_FOLLOW_TOKEN }}
+          token: ${{ secrets.AUTO_FOLLOW_PAT }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Auto-Follower Script
         env:
-          GITHUB_TOKEN: ${{ secrets.AUTO_FOLLOW_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.AUTO_FOLLOW_PAT }}
         run: |
           python scripts/auto_follow_ai_devs.py --limit 50
 
