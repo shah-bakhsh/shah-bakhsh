@@ -1,96 +1,183 @@
-<!-- GitHub profile README • Shah Bakhsh -->
+<!--
+  SHAH.OS / GitHub Profile
+  Original editorial design for Shah Bakhsh.
+  Research outcomes below are reported by their linked repositories.
+-->
+
 <div align="center">
 
-# Shah Bakhsh
+<img src="./assets/shah-os-banner.svg" alt="SHAH.OS — Shah Bakhsh, AI Engineer, LLM Developer and Balochi NLP Researcher" width="100%" />
 
-### AI Engineer · LLM Developer · Balochi NLP Researcher
+<br/>
 
-**AI should speak every language.**
+### Building intelligent systems. Advancing language technology.
 
-I build and explore intelligent systems—from language models and developer tools to agentic AI applications—with a long-term focus on language technology for underrepresented communities.
+I build at the intersection of **LLMs, natural language processing, and agentic AI**,  
+with a long-term mission to make language technology more accessible to **Balochi** and other underrepresented languages.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-shahbakhsh.tech-F5C518?style=for-the-badge&logo=googlechrome&logoColor=08090A)](https://shahbakhsh.tech)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shah-bakhsh/)
-[![Hugging Face](https://img.shields.io/badge/Hugging_Face-Models-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/shah-bakhsh)
-[![Email](https://img.shields.io/badge/Email-Get_in_touch-24292F?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shahbakhshtech@gmail.com)
+<br/>
+
+<a href="https://shahbakhsh.tech"><img src="https://img.shields.io/badge/EXPLORE_PORTFOLIO-F5C518?style=for-the-badge&logo=googlechrome&logoColor=08090A&labelColor=F5C518" alt="Explore portfolio" /></a>
+<a href="https://shahbakhsh.tech/research/"><img src="https://img.shields.io/badge/RESEARCH_LIBRARY-202226?style=for-the-badge&logo=readthedocs&logoColor=F5C518" alt="Research library" /></a>
+<a href="https://www.linkedin.com/in/shah-bakhsh/"><img src="https://img.shields.io/badge/LINKEDIN-202226?style=for-the-badge&logo=linkedin&logoColor=F5C518" alt="Connect on LinkedIn" /></a>
+<a href="mailto:shahbakhshtech@gmail.com"><img src="https://img.shields.io/badge/CONTACT-202226?style=for-the-badge&logo=gmail&logoColor=F5C518" alt="Contact Shah Bakhsh" /></a>
 
 </div>
 
----
+<br/>
 
-## About me
+## 01 / About
 
-I'm **Shah Bakhsh**, an AI engineer interested in building useful, well-evaluated systems at the intersection of **large language models, natural language processing, agentic AI, and applied machine learning**.
+I'm **Shah Bakhsh**, an AI engineer and LLM developer exploring the intersection of **language models, applied machine learning, and practical AI systems**.
 
-A central part of my work is **Balochi language technology**: creating and adapting the models, datasets, tokenizers, and developer infrastructure needed to make low-resource language NLP more practical.
+My research focus is **Balochi NLP**—from text preparation and tokenization to language representations, part-of-speech tagging, named-entity recognition, and developer tooling.
 
-- **Research focus:** language representation, tokenization, part-of-speech tagging, named-entity recognition, and Balochi text processing.
-- **Engineering interests:** LLM applications, retrieval-augmented generation (RAG), AI agents, APIs, and automation.
-- **Working principles:** reproducible experiments, transparent evaluation, honest limitations, and open-source learning.
-- **Portfolio:** [shahbakhsh.tech](https://shahbakhsh.tech) · [Research library](https://shahbakhsh.tech/research/) · [Selected projects](https://shahbakhsh.tech/projects/)
+I care about research that can be examined and built upon: documented experiments, clear evaluation methods, transparent limitations, and useful open-source implementations.
 
-> **Mission:** Help make modern language technology more accessible for Balochi and other underrepresented languages.
+```text
+CURRENT FOCUS
+  01  Low-resource language technology
+  02  Large language models and model adaptation
+  03  AI agents, retrieval, and developer workflows
+  04  Research-to-product engineering
+```
 
-## Featured research · Balochi NLP
+<div align="center">
+<img src="./assets/research-mission.svg" alt="Mission: Better language technology for underrepresented communities" width="100%" />
+</div>
 
-These projects form part of my ongoing Balochi language-technology work. The metrics below are **reported in their respective project repositories**, not independent or universal performance guarantees.
+<br/>
 
-| Project | What it does | Documented result / status |
-|:--|:--|:--|
-| **[BalBERT](https://github.com/shah-bakhsh/BalBERT)** | Adapts XLM-RoBERTa language representations to Balochi text. | ~97.8% lower MLM perplexity compared with the repository's stated baseline. |
-| **[BalPOS](https://github.com/shah-bakhsh/BalPOS)** | Balochi part-of-speech tagging with 16 Universal Dependencies labels. | BalPOS v2: **87.26%** held-out accuracy; **87.22%** weighted F1. |
-| **[BalNER](https://github.com/shah-bakhsh/BalNER)** | Named-entity recognition for Balochi text. | **0.7034** entity-level F1 on the documented test set. |
-| **[BalTokenizer](https://github.com/shah-bakhsh/BalTokenizer)** | A Balochi-focused Unigram tokenizer. | 48K configuration; **99.9%** reported character coverage and **0.0%** unknown-token rate in the documented evaluation. |
-| **[BalNLP](https://github.com/shah-bakhsh/BalNLP)** | Integrates Balochi NLP components with Python tooling, an API, and an RTL interface. | Local integration checks documented; not a model-accuracy claim. |
+## 02 / Featured research
 
-**Explore the complete research library:** [shahbakhsh.tech/research](https://shahbakhsh.tech/research/), including an overview of ongoing BalOCR exploration.
-
-### Selected applied AI projects
-
-| Project | Focus |
-|:--|:--|
-| **[CrisisPilot AI](https://github.com/shah-bakhsh/CrisisPilot-AI)** | An exploration of multi-agent workflows for emergency coordination and disaster intelligence. |
-| **[PathPilot AI](https://github.com/shah-bakhsh/pathpilot-ai)** | A concept exploring AI-assisted career guidance and development pathways. |
-| **[ReelForge](https://github.com/shah-bakhsh/reelforge)** | An experimental, local-first media workflow using speech and computer-vision tooling. |
-| **[SHAH.OS](https://github.com/shah-bakhsh/shah-bakhsh-shah-os)** | My Next.js portfolio, research case studies, and professional online home. |
-
-## Technical interests & tools
+**Balochi AI Lab** · Language representation → Language infrastructure → Linguistic understanding
 
 <table>
-<tr><td><strong>AI & NLP</strong></td><td>PyTorch · Hugging Face Transformers · XLM-RoBERTa · token classification · language-model evaluation</td></tr>
-<tr><td><strong>LLM systems</strong></td><td>Retrieval-augmented generation · agentic workflows · model adaptation · tool use</td></tr>
-<tr><td><strong>Software engineering</strong></td><td>Python · TypeScript · JavaScript · REST APIs · FastAPI</td></tr>
-<tr><td><strong>Web & developer tools</strong></td><td>Next.js · React · Git · GitHub Actions · Vercel</td></tr>
+<tr>
+<td width="50%" valign="top">
+
+### [BalBERT ↗](https://github.com/shah-bakhsh/BalBERT)
+**Foundational language representations**
+
+Domain-adaptive XLM-RoBERTa training for Balochi, supporting continued experimentation with low-resource language models.
+
+**Reported:** ~97.8% lower MLM perplexity against the project's stated baseline.
+
+[Read the research brief →](https://shahbakhsh.tech/research/balbert/)
+
+</td>
+<td width="50%" valign="top">
+
+### [BalPOS ↗](https://github.com/shah-bakhsh/BalPOS)
+**Part-of-speech understanding**
+
+A transformer-based Balochi POS tagging system built around 16 Universal Dependencies tags.
+
+**Reported:** 87.26% held-out accuracy · 87.22% weighted F1 (v2).
+
+[Read the research brief →](https://shahbakhsh.tech/research/balpos/)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### [BalNER ↗](https://github.com/shah-bakhsh/BalNER)
+**Named-entity recognition**
+
+Experiments in recognizing and classifying named entities in Balochi text.
+
+**Reported:** 0.7034 entity-level F1 on the documented test set.
+
+[Read the research brief →](https://shahbakhsh.tech/research/balner/)
+
+</td>
+<td width="50%" valign="top">
+
+### [BalTokenizer ↗](https://github.com/shah-bakhsh/BalTokenizer)
+**Language infrastructure**
+
+A 48K Unigram tokenizer configuration tailored to Balochi text.
+
+**Reported:** 99.9% character coverage · 0.0% unknown-token rate in the evaluated text.
+
+[Read the research brief →](https://shahbakhsh.tech/research/baltokenizer/)
+
+</td>
+</tr>
 </table>
 
-## SHAH.OS · My professional portfolio
+<sub>**Research integrity:** All figures above come from the linked repositories and their documented evaluation conditions. They are not independent benchmarks or guarantees of general-domain performance.</sub>
 
-**[shahbakhsh.tech](https://shahbakhsh.tech)** is the central place to explore my research, engineering experiments, project documentation, and contact details.
+**Beyond the models:** [BalNLP](https://github.com/shah-bakhsh/BalNLP) brings components together through Python/FastAPI and right-to-left tooling; [BalOCR](https://shahbakhsh.tech/research/balocr/) is an ongoing research direction without a public quality metric.
 
-| Explore | Link |
-|:--|:--|
-| Official website | [shahbakhsh.tech](https://shahbakhsh.tech) |
-| Balochi NLP research | [Research case studies](https://shahbakhsh.tech/research/) |
-| Selected work | [Projects](https://shahbakhsh.tech/projects/) |
-| Background | [About](https://shahbakhsh.tech/about/) |
-| Professional profiles | [Links](https://shahbakhsh.tech/links/) |
+**[Explore the full Balochi NLP research library →](https://shahbakhsh.tech/research/)**
 
-## Connect & collaborate
+<br/>
 
-I'm interested in conversations around **low-resource language AI, open-source NLP, LLM engineering, and practical AI systems**.
+## 03 / Engineering projects
 
-- **LinkedIn:** [Shah Bakhsh](https://www.linkedin.com/in/shah-bakhsh/)
-- **Hugging Face:** [shah-bakhsh](https://huggingface.co/shah-bakhsh)
-- **Kaggle:** [shahbakhshtech](https://www.kaggle.com/shahbakhshtech)
-- **Email:** [shahbakhshtech@gmail.com](mailto:shahbakhshtech@gmail.com)
-- **Website:** [shahbakhsh.tech/contact](https://shahbakhsh.tech/contact/)
+| Project | Area | What I'm exploring |
+| :--- | :--- | :--- |
+| **[SHAH.OS](https://github.com/shah-bakhsh/shah-bakhsh-shah-os)** | Portfolio engineering | A Next.js research portfolio with interactive UI, documented case studies, and professional links |
+| **[CrisisPilot AI](https://github.com/shah-bakhsh/CrisisPilot-AI)** | Agentic systems | Multi-agent workflows for emergency intelligence and coordination; concept/exploration |
+| **[PathPilot AI](https://github.com/shah-bakhsh/pathpilot-ai)** | Applied AI | Personalized career navigation and AI-assisted guidance; concept |
+| **[ReelForge](https://github.com/shah-bakhsh/reelforge)** | Local AI tools | Experimental video clipping using speech, vision, and local model workflows |
 
----
+<div align="center">
+<a href="https://shahbakhsh.tech/projects/"><strong>View selected projects and case studies ↗</strong></a>
+</div>
+
+<br/>
+
+## 04 / Technical toolkit
+
+**AI & language engineering**
+
+![Python](https://img.shields.io/badge/Python-151719?style=flat-square&logo=python&logoColor=F5C518)
+![PyTorch](https://img.shields.io/badge/PyTorch-151719?style=flat-square&logo=pytorch&logoColor=F5C518)
+![Hugging Face](https://img.shields.io/badge/Transformers-151719?style=flat-square&logo=huggingface&logoColor=F5C518)
+![NLP](https://img.shields.io/badge/Low--resource_NLP-151719?style=flat-square&logoColor=F5C518)
+![FastAPI](https://img.shields.io/badge/FastAPI-151719?style=flat-square&logo=fastapi&logoColor=F5C518)
+
+**Application & developer engineering**
+
+![TypeScript](https://img.shields.io/badge/TypeScript-151719?style=flat-square&logo=typescript&logoColor=F5C518)
+![React](https://img.shields.io/badge/React-151719?style=flat-square&logo=react&logoColor=F5C518)
+![Next.js](https://img.shields.io/badge/Next.js-151719?style=flat-square&logo=nextdotjs&logoColor=F5C518)
+![Git](https://img.shields.io/badge/Git-151719?style=flat-square&logo=git&logoColor=F5C518)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-151719?style=flat-square&logo=githubactions&logoColor=F5C518)
+
+<sub>Areas of exploration include XLM-RoBERTa adaptation, token classification, RAG, agentic workflows, model evaluation, and API-based integrations.</sub>
+
+<br/>
+
+## 05 / My professional home
 
 <div align="center">
 
-**Building toward an AI ecosystem that serves more languages and more people.**
+### [SHAH.OS — shahbakhsh.tech](https://shahbakhsh.tech)
 
-<sub>© 2026 Shah Bakhsh · [SHAH.OS](https://shahbakhsh.tech)</sub>
+**One place for my research, projects, and collaborations.**
+
+[About me](https://shahbakhsh.tech/about/) · [Research](https://shahbakhsh.tech/research/) · [Projects](https://shahbakhsh.tech/projects/) · [Contact](https://shahbakhsh.tech/contact/)
+
+</div>
+
+<br/>
+
+## 06 / Let's connect
+
+I'm interested in thoughtful collaboration around **Balochi language technology, low-resource NLP, LLM engineering, and useful agentic systems**.
+
+<div align="center">
+
+[**Website**](https://shahbakhsh.tech) &nbsp;·&nbsp; [**LinkedIn**](https://www.linkedin.com/in/shah-bakhsh/) &nbsp;·&nbsp; [**Hugging Face**](https://huggingface.co/shah-bakhsh) &nbsp;·&nbsp; [**Kaggle**](https://www.kaggle.com/shahbakhshtech) &nbsp;·&nbsp; [**Email**](mailto:shahbakhshtech@gmail.com)
+
+<br/>
+
+**AI should speak every language.**
+
+<sub>SHAH.OS © 2026 Shah Bakhsh · Designed for clarity, research, and real-world impact.</sub>
 
 </div>
