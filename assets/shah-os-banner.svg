@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+<title id="title">SHAH.OS — Shah Bakhsh</title><desc id="desc">Elegant black and gold AI research banner for Shah Bakhsh, AI Engineer and Balochi NLP Researcher</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#121415"/><stop offset=".5" stop-color="#0B0D0E"/><stop offset="1" stop-color="#15140E"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#F5C518" stop-opacity=".2"/><stop offset="1" stop-color="#F5C518" stop-opacity="0"/></radialGradient>
+<linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#F5C518" stop-opacity=".04"/><stop offset=".7" stop-color="#F5C518" stop-opacity=".5"/><stop offset="1" stop-color="#FFF0B8" stop-opacity=".06"/></linearGradient>
+<pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse"><path d="M52 0H0V52" fill="none" stroke="#F5F1DE" stroke-opacity=".065" stroke-width="1"/></pattern>
+<clipPath id="frame"><rect width="1200" height="460" rx="25"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="1200" height="460" fill="url(#bg)"/><rect width="1200" height="460" fill="url(#grid)"/>
+<circle cx="1010" cy="190" r="375" fill="url(#glow)"/>
+<path d="M700 0V460" stroke="#F5C518" stroke-opacity=".15"/>
+<g fill="none" stroke="url(#line)" stroke-width="1.6">
+<path d="M718 84L799 134L898 83L1010 147L1127 91"/>
+<path d="M735 241L837 204L932 272L1054 220L1174 283"/>
+<path d="M774 359L869 319L968 373L1072 329L1190 375"/>
+<path d="M799 134L837 204L898 83L932 272L1010 147L1054 220L1127 91L1174 283"/>
+<path d="M837 204L869 319L932 272L968 373L1054 220L1072 329"/>
+</g>
+<g fill="#F5C518">
+<circle cx="799" cy="134" r="4"/><circle cx="898" cy="83" r="5"/><circle cx="1010" cy="147" r="6"/><circle cx="837" cy="204" r="4"/><circle cx="932" cy="272" r="5"/><circle cx="1054" cy="220" r="5"/><circle cx="869" cy="319" r="4"/><circle cx="968" cy="373" r="4"/><circle cx="1072" cy="329" r="4"/>
+</g>
+<g fill="#F9ECC2" opacity=".55"><circle cx="718" cy="84" r="3"/><circle cx="1127" cy="91" r="3"/><circle cx="735" cy="241" r="3"/><circle cx="1174" cy="283" r="3"/><circle cx="774" cy="359" r="3"/><circle cx="1190" cy="375" r="3"/></g>
+<rect x="54" y="52" width="10" height="10" rx="5" fill="#F5C518"/>
+<text x="82" y="62" fill="#F5C518" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" letter-spacing="6">SHAH.OS</text>
+<text x="54" y="191" fill="#F8F7F1" font-family="Arial,Helvetica,sans-serif" font-size="74" font-weight="700" letter-spacing="-3">Shah Bakhsh</text>
+<rect x="56" y="221" width="63" height="3" rx="1.5" fill="#F5C518"/>
+<text x="54" y="269" fill="#F3D36A" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="600" letter-spacing=".5">AI Engineer  /  LLM Developer</text>
+<text x="54" y="311" fill="#CFD0CC" font-family="Arial,Helvetica,sans-serif" font-size="22">Balochi NLP  •  Agentic Systems  •  Open Research</text>
+<text x="54" y="399" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="18" letter-spacing="2.2">AI SHOULD SPEAK EVERY LANGUAGE.</text>
+<rect x="52" y="421" width="1096" height="1" fill="#F5C518" opacity=".3"/>
+<text x="1144" y="442" text-anchor="end" fill="#9A9B97" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="2">RESEARCH  /  BUILD  /  IMPACT</text>
+</g>
+</svg>
