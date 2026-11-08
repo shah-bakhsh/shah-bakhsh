@@ -6,36 +6,37 @@ on:
   pull_request_target:
     types: [opened]
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
 jobs:
   greet:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: write
-
     steps:
-      - name: Welcome Issue Author
-        if: github.event.issue
+      - name: Welcome issue author
+        if: ${{ github.event_name == 'issues' }}
         uses: actions/github-script@v7
         with:
           script: |
-            const issueComment = `Hi @${context.actor}! 👋 Thank you for opening an issue in Shah Bakhsh's open-source repository.\n\nYour issue has been received and logged! Feel free to check out our flagship AI projects at [github.com/shah-bakhsh](https://github.com/shah-bakhsh). 🚀`;
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
+            const body = `Hi @${context.actor}! 👋 Thank you for opening an issue in this repository. We appreciate your feedback and will review it when possible.`;
+            await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: issueComment
+              issue_number: context.issue.number,
+              body
             });
 
-      - name: Welcome Pull Request Author
-        if: github.event.pull_request
+      - name: Welcome pull request author
+        if: ${{ github.event_name == 'pull_request_target' }}
         uses: actions/github-script@v7
         with:
           script: |
-            const prComment = `Hi @${context.actor}! 🎉 Thank you for submitting a Pull Request to Shah Bakhsh's repository!\n\nYour code contribution is greatly appreciated and will be reviewed shortly. Stay tuned! 🤖✨`;
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
+            const body = `Hi @${context.actor}! 🎉 Thank you for contributing a pull request! We appreciate your work and will review it when possible.`;
+            await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: prComment
+              issue_number: context.issue.number,
+              body
             });
