@@ -170,48 +170,21 @@ A 48K Unigram tokenizer configuration tailored to Balochi text.
 
 <br/>
 
-## 06 / GitHub contributions & momentum
+## 06 / GitHub activity
 
 <div align="center">
 
-**A live record of the work — not decorative or manually entered counts.**
+**Consistent progress. Real contributions.**
 
-<a href="https://github.com/shah-bakhsh">
-  <img src="https://streak-stats.demolab.com?user=shah-bakhsh&theme=dark&hide_border=true&background=0D1117&ring=F5C518&fire=F5C518&currStreakLabel=F5C518&sideLabels=E5E7EB&dates=9CA3AF" alt="Current contribution streak, longest streak, and total contributions for Shah Bakhsh" width="76%" />
+<a href="https://github.com/shah-bakhsh?tab=overview">
+  <img src="https://streak-stats.demolab.com?user=shah-bakhsh&theme=dark&hide_border=true&background=0D1117&ring=F5C518&fire=F5C518&currStreakLabel=F5C518&sideLabels=E5E7EB&dates=9CA3AF" alt="Live GitHub contribution streak and contribution history for Shah Bakhsh" width="78%" />
 </a>
 
-### Activity overview
+<br/>
 
-The cards below are generated from **GitHub's actual contribution data** by a scheduled GitHub Action. The breakdown includes **commits, pull requests, issues, and code reviews** — the same activity types visible in GitHub's native Activity overview.
+[**Explore my GitHub contribution history ↗**](https://github.com/shah-bakhsh?tab=overview)
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/analytics/overview.dark.svg" />
-  <img src="./assets/analytics/overview.light.svg" alt="GitHub activity overview with real contribution and project totals" width="100%" />
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/analytics/composition.dark.svg" />
-  <img src="./assets/analytics/composition.light.svg" alt="Contribution activity breakdown: commits, pull requests, issues, and code reviews" width="100%" />
-</picture>
-
-<details>
-  <summary><strong>More activity: contribution calendar, languages, and coding rhythm</strong></summary>
-  <br/>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/analytics/contributions.dark.svg" />
-    <img src="./assets/analytics/contributions.light.svg" alt="Contribution calendar showing current and longest GitHub streaks" width="100%" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/analytics/languages.dark.svg" />
-    <img src="./assets/analytics/languages.light.svg" alt="Languages used in public GitHub repositories" width="100%" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/analytics/rhythm.dark.svg" />
-    <img src="./assets/analytics/rhythm.light.svg" alt="Real contribution activity by weekday and month" width="100%" />
-  </picture>
-</details>
-
-<sub>These automatically generated charts depend on public GitHub contribution data and may update with a delay. Daily updates run in this repository's Actions workflow. The native GitHub activity overview can also be enabled in profile Contribution settings.</sub>
+<sub>Streak information is retrieved live and may be temporarily unavailable if the image service is down. GitHub itself is the source of truth for contribution activity.</sub>
 
 </div>
 
