@@ -1,28 +1,59 @@
-name: Daily Streak Keeper
+name: Daily Streak Log (5 Commits)
 
 on:
   schedule:
-    - cron: "50 23 * * *" # Runs every day at 11:50 PM UTC (Ensures daily green tile)
-  workflow_dispatch:     # Allows manual trigger anytime
+    # 18:00 UTC = 23:00 Pakistan Standard Time (UTC+5)
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-streak-log-main
+  cancel-in-progress: false
 
 jobs:
-  keep-streak:
+  keep-streak-log:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
+    timeout-minutes: 10
     steps:
-      - name: Checkout Repository
+      - name: Checkout main
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
 
-      - name: Update Daily Streak Log
+      - name: Append five daily log commits
+        shell: bash
         run: |
-          date -u +"%Y-%m-%d %H:%M:%S UTC" >> streak.log
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit and Push Daily Streak
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add streak.log
-          git commit -m "chore: keep daily contribution streak active [streak-bot]" || exit 0
-          git push
+          # Use Pakistan local date so the logs match the intended daily schedule.
+          today="$(TZ=Asia/Karachi date +%F)"
+          mkdir -p .github/streak
+          log=".github/streak/daily-log.txt"
+          touch "$log"
+
+          for number in 1 2 3 4 5; do
+            marker="date=${today} entry=${number}/5"
+            # Prevent duplicate commits on retries or manual re-runs.
+            if grep -Fqx "$marker" "$log"; then
+              echo "Already recorded $marker"
+              continue
+            fi
+            printf '%s\n' "$marker" >> "$log"
+            git add "$log"
+            git commit -m "chore(log): record ${today} daily entry ${number}/5 [skip ci]"
+          done
+
+          # Fail loudly on authentication or branch protection errors.
+          # Never disguise a failed push as a successful workflow.
+          if [ "$(git rev-list --count origin/main..HEAD)" -gt 0 ]; then
+            git push origin HEAD:main
+          else
+            echo "Today's five entries already exist; nothing to push."
+          fi
