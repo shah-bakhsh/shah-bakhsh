@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110" role="img" aria-label="Research focus: language, intelligence, access">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#121415"/><stop offset=".5" stop-color="#1A1911"/><stop offset="1" stop-color="#121415"/></linearGradient></defs>
+<rect width="1200" height="110" rx="16" fill="url(#b)"/>
+<rect x="1" y="1" width="1198" height="108" rx="15" fill="none" stroke="#A88A28" stroke-opacity=".42"/>
+<text x="66" y="49" fill="#F5C518" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" letter-spacing="4">THE MISSION</text>
+<text x="66" y="81" fill="#F6F6F0" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="600">Better language technology for underrepresented communities.</text>
+<path d="M1002 34L1024 55L1002 76M1047 34L1069 55L1047 76M1092 34L1114 55L1092 76" fill="none" stroke="#F5C518" stroke-opacity=".7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
