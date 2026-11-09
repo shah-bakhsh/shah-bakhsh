@@ -40,37 +40,20 @@ HISTORY_FILE = "followed_users.json"
 MY_USERNAME = "shah-bakhsh"
 
 # Diverse search queries covering many AI/ML communities
+# Repository search supports topic filters; user search does not.
+# Discover relevant repository maintainers rather than using unsupported user topic queries.
 SEARCH_QUERIES = [
-    # AI topics
-    "type:user topic:artificial-intelligence followers:>10",
-    "type:user topic:ai followers:>50",
-    "type:user topic:machine-learning followers:>20",
-    "type:user topic:deep-learning followers:>20",
-    "type:user topic:llm followers:>10",
-    "type:user topic:large-language-models followers:>10",
-    "type:user topic:agentic-ai followers:>5",
-    "type:user topic:generative-ai followers:>10",
-    "type:user topic:transformers followers:>10",
-    "type:user topic:nlp followers:>20",
-    "type:user topic:natural-language-processing followers:>10",
-    "type:user topic:computer-vision followers:>20",
-    "type:user topic:reinforcement-learning followers:>10",
-    "type:user topic:neural-network followers:>10",
-    "type:user topic:data-science followers:>30",
-    "type:user topic:mlops followers:>10",
-    "type:user topic:pytorch followers:>15",
-    "type:user topic:tensorflow followers:>15",
-    "type:user topic:huggingface followers:>5",
-    "type:user topic:langchain followers:>5",
-    "type:user topic:stable-diffusion followers:>5",
-    "type:user topic:chatgpt followers:>5",
-    "type:user topic:openai followers:>5",
-    # Language + followers combos (catches devs without AI topics)
-    "type:user language:python followers:>100",
-    "type:user language:python followers:>50 repos:>20",
-    "type:user language:jupyter-notebook followers:>30",
+    "topic:machine-learning stars:>50 archived:false",
+    "topic:large-language-models stars:>20 archived:false",
+    "topic:llm stars:>50 archived:false",
+    "topic:natural-language-processing stars:>20 archived:false",
+    "topic:agentic-ai stars:>10 archived:false",
+    "topic:rag stars:>20 archived:false",
+    "topic:deep-learning stars:>50 archived:false",
+    "topic:pytorch stars:>50 archived:false",
+    "topic:huggingface stars:>20 archived:false",
+    "topic:transformers stars:>20 archived:false",
 ]
-
 
 def load_history():
     """Load the set of previously followed usernames from the JSON file."""
@@ -115,87 +98,49 @@ def github_api_request(url, token, method="GET"):
 
 
 def search_ai_developers(token, limit=50):
-    """
-    Search for AI/ML developers across MULTIPLE queries and pages
-    to discover new users every day.
-    
-    Strategy:
-    - Randomly select several queries from the pool
-    - Use random page offsets (page 1-10) to reach beyond the top results
-    - Collect unique usernames until we have enough candidates
-    """
-    all_candidates = []
+    """Discover individual owners of relevant public AI/ML repositories."""
+    candidates = []
     seen = set()
-
-    # Pick a random subset of queries (5-8 queries per run for variety)
-    num_queries = min(random.randint(5, 8), len(SEARCH_QUERIES))
-    selected_queries = random.sample(SEARCH_QUERIES, num_queries)
-
-    print(f"  Searching with {num_queries} different queries...")
+    selected_queries = random.sample(SEARCH_QUERIES, min(5, len(SEARCH_QUERIES)))
+    print(f"  Searching repository maintainers using {len(selected_queries)} topic queries...")
 
     for query in selected_queries:
-        # Random page between 1 and 10 to get different results each day
-        page = random.randint(1, 10)
-        encoded_query = urllib.parse.quote(query)
+        # Repository topics are supported here; select from first two pages.
+        page = random.choice((1, 2))
         url = (
-            f"https://api.github.com/search/users"
-            f"?q={encoded_query}"
-            f"&sort=followers&order=desc"
+            "https://api.github.com/search/repositories"
+            f"?q={urllib.parse.quote(query)}&sort=updated&order=desc"
             f"&per_page=50&page={page}"
         )
-
         data, status = github_api_request(url, token)
-
-        if status == 403:
-            print(f"    [RATE LIMIT] Hit rate limit, waiting 60s...")
-            time.sleep(60)
-            data, status = github_api_request(url, token)
-
-        if status == 401:
-            print("[ERROR] GitHub rejected AUTO_FOLLOW_PAT (HTTP 401). Refresh the repository secret with a valid user:follow token.")
+        if status != 200:
+            print(f"[ERROR] Repository discovery API returned HTTP {status} for {query}")
             sys.exit(1)
 
-        if status == 422:
-            # GitHub returns 422 if page is too deep, try page 1
-            url_p1 = (
-                f"https://api.github.com/search/users"
-                f"?q={encoded_query}"
-                f"&sort=followers&order=desc"
-                f"&per_page=50&page=1"
-            )
-            data, status = github_api_request(url_p1, token)
+        items = data.get("items", []) if isinstance(data, dict) else []
+        added = 0
+        for repository in items:
+            owner = repository.get("owner") or {}
+            login = owner.get("login")
+            if (owner.get("type") != "User" or not login or
+                    login.lower() == MY_USERNAME.lower() or
+                    login.lower() in seen):
+                continue
+            seen.add(login.lower())
+            candidates.append(login)
+            added += 1
 
-        if status == 401:
-            print("[ERROR] GitHub rejected AUTO_FOLLOW_PAT (HTTP 401). Refresh the secret.")
-            sys.exit(1)
-
-        if data and "items" in data:
-            users = [
-                user["login"]
-                for user in data["items"]
-                if user["login"].lower() != MY_USERNAME.lower()
-                and user["login"] not in seen
-            ]
-            for u in users:
-                seen.add(u)
-                all_candidates.append(u)
-
-            print(f"    Query '{query[:50]}...' (page {page}): found {len(users)} new candidates")
-        else:
-            print(f"    Query '{query[:50]}...' (page {page}): no results (HTTP {status})")
-
-        # Small delay between search requests to avoid rate limiting
-        time.sleep(random.uniform(2.0, 4.0))
-
-        # Stop searching if we have way more than enough
-        if len(all_candidates) >= limit * 3:
+        print(f"    Query '{query}' (page {page}): {len(items)} repositories, {added} new developers")
+        if len(candidates) >= limit * 2:
             break
+        time.sleep(1)
 
-    # Shuffle to randomize follow order
-    random.shuffle(all_candidates)
-
-    print(f"\n  Total unique candidates discovered: {len(all_candidates)}")
-    return all_candidates
+    random.shuffle(candidates)
+    print(f"  Total unique individual developers discovered: {len(candidates)}")
+    if not candidates:
+        print("[ERROR] No candidate developers discovered; check search queries and API responses.")
+        sys.exit(1)
+    return candidates
 
 
 def follow_user(token, username):
