@@ -151,6 +151,10 @@ def search_ai_developers(token, limit=50):
             time.sleep(60)
             data, status = github_api_request(url, token)
 
+        if status == 401:
+            print("[ERROR] GitHub rejected AUTO_FOLLOW_PAT (HTTP 401). Refresh the repository secret with a valid user:follow token.")
+            sys.exit(1)
+
         if status == 422:
             # GitHub returns 422 if page is too deep, try page 1
             url_p1 = (
@@ -160,6 +164,10 @@ def search_ai_developers(token, limit=50):
                 f"&per_page=50&page=1"
             )
             data, status = github_api_request(url_p1, token)
+
+        if status == 401:
+            print("[ERROR] GitHub rejected AUTO_FOLLOW_PAT (HTTP 401). Refresh the secret.")
+            sys.exit(1)
 
         if data and "items" in data:
             users = [
@@ -237,6 +245,14 @@ def main():
     print(f"  Target: {args.limit} new follows per run")
     print("=" * 60)
 
+    # Verify the PAT before searching; an existing nonempty secret is not necessarily valid.
+    user_data, auth_status = github_api_request("https://api.github.com/user", token)
+    if auth_status != 200 or not user_data:
+        print(f"[ERROR] GitHub token authentication check failed (HTTP {auth_status}).")
+        print("Refresh AUTO_FOLLOW_PAT with a valid personal access token that permits following users.")
+        sys.exit(1)
+    print(f"[AUTH] GitHub API authenticated as @{user_data.get('login', 'unknown')}")
+
     # Load history of previously followed users
     history = load_history()
     print(f"\n  Previously followed: {len(history)} users")
@@ -280,12 +296,13 @@ def main():
             print(f"    [WAIT] Sleeping {delay:.1f}s for account safety...\n")
             time.sleep(delay)
         else:
-            # Still add to history to avoid retrying failed users
-            if username not in history:
-                history.add(username)
-                save_history(history)
+            # Failed follows are not successful history entries.
             rate_limit_hits += 1
             time.sleep(random.uniform(10.0, 20.0))
+
+    if followed_count == 0:
+        print("[ERROR] No accounts were followed; review API errors and token scopes above.")
+        sys.exit(1)
 
     print("=" * 60)
     print(f"  DONE! Followed {followed_count} new AI developers today!")
