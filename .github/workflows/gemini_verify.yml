@@ -23,7 +23,7 @@ jobs:
       - name: Verify Gemini model connection without publishing
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: gemini-2.5-flash
+          GEMINI_MODEL: gemini-3.1-flash-lite
         run: |
           python3 - <<'PY'
           import os, sys
