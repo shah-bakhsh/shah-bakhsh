@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/gemini_verify.yml'
+      - 'scripts/github_presence_agent.py'
   workflow_dispatch:
 
 permissions:
