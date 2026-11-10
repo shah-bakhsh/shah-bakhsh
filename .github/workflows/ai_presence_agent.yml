@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  discussions: write
 
 concurrency:
   group: shah-os-presence-main
