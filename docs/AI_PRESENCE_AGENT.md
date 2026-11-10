@@ -37,7 +37,7 @@ A date-specific state file prevents duplicate daily publications when rerun.
    category. This workflow uses `DISCUSSIONS_MODE=optional`; the Markdown post
    still publishes even when Discussions is unavailable. A GitHub App token with
    Discussion write permission may be needed; the built-in token may be insufficient.
-3. Add Actions secret `GEMINI_API_KEY` from Google AI Studio for LLM-written analysis.\n   Set `GEMINI_MODEL=gemini-2.5-flash` (already configured). Free API quotas\n   and model access vary by region and project; do not enable billing if your\n   goal is strictly free use. Without the key or when quota is exceeded, the workflow still
+3. Add Actions secret `GEMINI_API_KEY` from Google AI Studio for LLM-written analysis.\n   Set `GEMINI_MODEL=gemini-3.1-flash-lite` (already configured). Free API quotas\n   and model access vary by region and project; do not enable billing if your\n   goal is strictly free use. Without the key or when quota is exceeded, the workflow still
    publishes grounded source descriptions, not generated essays.
 4. After merge, run the publisher manually in Actions to verify the generated
    post and workflow logs. A successful workflow must show a pushed commit
