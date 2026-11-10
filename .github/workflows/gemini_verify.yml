@@ -1,0 +1,46 @@
+name: SHAH.OS Gemini - Verify Connection
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/gemini_verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify Gemini model connection without publishing
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-2.5-flash
+        run: |
+          python3 - <<'PY'
+          import os, sys
+          from scripts.github_presence_agent import gemini_generate
+          if not os.environ.get("GEMINI_API_KEY"):
+              print("::error::GEMINI_API_KEY secret was not provided to GitHub Actions")
+              sys.exit(1)
+          try:
+              result = gemini_generate(
+                  "Reply only with the single word GEMINI_OK.",
+                  {"test": "Return GEMINI_OK; no publication or external action."})
+              if "GEMINI_OK" not in result:
+                  print("::error::Gemini returned an unexpected response")
+                  sys.exit(1)
+              print("Gemini authentication and text generation succeeded.")
+          except Exception as e:
+              status = getattr(e, "code", None)
+              label = "HTTP " + str(status) if status is not None else type(e).__name__
+              print("::error::Gemini connectivity failed: " + label)
+              sys.exit(1)
+          PY
