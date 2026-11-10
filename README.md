@@ -190,6 +190,14 @@ A 48K Unigram tokenizer configuration tailored to Balochi text.
 
 <br/>
 
+### AI Research Journal
+
+[**Explore daily AI research notes and open-source opportunities ↗**](https://github.com/shah-bakhsh/shah-bakhsh/tree/main/docs/presence)
+
+<sub>Automated, source-linked research briefs with transparent AI assistance. External community contributions are reviewed before publication.</sub>
+
+<br/>
+
 ## 07 / Let's connect
 
 I'm interested in thoughtful collaboration around **Balochi language technology, low-resource NLP, LLM engineering, and useful agentic systems**.
