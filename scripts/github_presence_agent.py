@@ -213,7 +213,7 @@ def write_post(date, topic, sources):
                 "Not personal experimentation or independent validation.*\n",
                 "gemini-ai-assisted")
     except (urllib.error.HTTPError, urllib.error.URLError, ValueError,
-            KeyError, TimeoutError, OSError) as error:
+            KeyError, TimeoutError, OSError, RuntimeError) as error:
         # Never log credentials or untrusted remote response bodies.
         code = getattr(error, "code", None)
         print("Gemini generation unavailable or quality checks failed; "
