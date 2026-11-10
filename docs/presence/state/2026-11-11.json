@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-11",
+  "topic": "Low-resource NLP",
+  "sources": [
+    {
+      "type": "Official release",
+      "title": "huggingface/transformers: v5.22.2",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.22.2",
+      "date": "2026-11-06",
+      "note": "# Patch release v5.22.2 Some in between patch for security and distributed fixes. See the included commits :hugs: - [Distributed] Set device_id only for NCCL (#50281) by @michaelbenayoun and @3outeille - Harden our Jinja sandboxing (#50431)\u2026"
+    }
+  ],
+  "warnings": [],
+  "mode": "gemini-ai-assisted",
+  "discussion_url": "https://github.com/shah-bakhsh/shah-bakhsh/discussions/12"
+}
