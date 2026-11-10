@@ -27,6 +27,49 @@ class PresenceTests(unittest.TestCase):
         body = agent.fallback_post(dt.date(2026, 11, 10), "AI", [])
         self.assertIn("not a claim", body)
 
+    def test_gemini_successful_generated_post(self):
+        source = {"type": "Official release", "title": "Test release",
+                  "url": "https://github.com/example/repo/releases/tag/v1",
+                  "date": "2026-11-10", "note": "A verified source."}
+        draft = "# AI engineering\n\n" + ("Useful technical detail. " * 65)
+        draft += "\nSource: " + source["url"]
+        with patch.dict(agent.os.environ, {"GEMINI_API_KEY": "fake-test-key"}), \
+                patch.object(agent, "gemini_generate", return_value=draft):
+            body, mode = agent.write_post(dt.date(2026, 11, 10), "AI", [source])
+        self.assertEqual(mode, "gemini-ai-assisted")
+        self.assertIn("AI-assisted technical commentary", body)
+
+    def test_gemini_fails_safely_without_valid_citations(self):
+        source = {"type": "Official release", "title": "Test release",
+                  "url": "https://github.com/example/repo/releases/tag/v1",
+                  "date": "2026-11-10", "note": "Verified."}
+        draft = ("Detailed prose about AI. " * 70) + "https://invalid.example/"
+        with patch.dict(agent.os.environ, {"GEMINI_API_KEY": "fake-test-key"}), \
+                patch.object(agent, "gemini_generate", return_value=draft):
+            body, mode = agent.write_post(dt.date(2026, 11, 10), "AI", [source])
+        self.assertEqual(mode, "source-linked")
+        self.assertIn(source["url"], body)
+
+    def test_gemini_request_shape_and_header(self):
+        import io
+        source = {"date": "2026-11-10", "topic": "AI", "sources": []}
+        fake_response = {"candidates": [{"content": {"parts": [{"text": "hello"}]}}]}
+        class Response:
+            def __enter__(self):
+                return io.BytesIO(json.dumps(fake_response).encode())
+            def __exit__(self, *args):
+                return False
+        import json
+        def check_request(request, timeout):
+            self.assertEqual(request.get_header("X-goog-api-key"), "fake-test-key")
+            self.assertIn("gemini-2.5-flash:generateContent", request.full_url)
+            self.assertEqual(request.get_method(), "POST")
+            return Response()
+        with patch.dict(agent.os.environ,
+                        {"GEMINI_API_KEY": "fake-test-key", "GEMINI_MODEL": "gemini-2.5-flash"}), \
+                patch.object(agent.urllib.request, "urlopen", side_effect=check_request):
+            self.assertEqual(agent.gemini_generate("Instructions", source), "hello")
+
     def test_duplicate_day_no_api_calls(self):
         with tempfile.TemporaryDirectory() as temp:
             old = agent.ROOT

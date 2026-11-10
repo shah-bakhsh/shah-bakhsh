@@ -10,7 +10,7 @@ impersonation or mass-engagement bot.
 
 - Automatically gather official GitHub software releases and arXiv paper metadata.
 - Create one dated, source-linked AI research journal per day when verified sources exist.
-- Optionally generate a richer article using an OpenAI API key; otherwise produce
+- Generate richer articles using the optional free-tier Gemini API key; otherwise produce
   a transparent citation-backed reading brief (no fabricated research or experiments).
 - Optionally cross-post to **this repository's** GitHub Discussions when supported.
 - Search public open-source issues read-only, saving links for owner review.
@@ -37,8 +37,7 @@ A date-specific state file prevents duplicate daily publications when rerun.
    category. This workflow uses `DISCUSSIONS_MODE=optional`; the Markdown post
    still publishes even when Discussions is unavailable. A GitHub App token with
    Discussion write permission may be needed; the built-in token may be insufficient.
-3. Optionally add Actions secret `OPENAI_API_KEY` for LLM-written analysis.
-   This may incur external API charges. Without the key, the workflow still
+3. Add Actions secret `GEMINI_API_KEY` from Google AI Studio for LLM-written analysis.\n   Set `GEMINI_MODEL=gemini-2.5-flash` (already configured). Free API quotas\n   and model access vary by region and project; do not enable billing if your\n   goal is strictly free use. Without the key or when quota is exceeded, the workflow still
    publishes grounded source descriptions, not generated essays.
 4. After merge, run the publisher manually in Actions to verify the generated
    post and workflow logs. A successful workflow must show a pushed commit
@@ -68,3 +67,7 @@ Publishing to GitHub Discussions may need additional feature configuration,
 permissions, and manual verification. The implementation cannot guarantee
 that GitHub executes every daily cron trigger or that external API services
 remain accessible.
+
+## Gemini activation (November 2026)
+
+The workflow reads `GEMINI_API_KEY` and uses the official Gemini `generateContent` REST endpoint. API results undergo basic citation URL screening; invalid, blocked or quota-limited responses fall back to the source-linked reading brief. Generated content is labeled AI-assisted. No OpenAI API key is needed. Do not publish private data to the free-tier API. API success and daily actual publishing must be verified in Actions logs.
