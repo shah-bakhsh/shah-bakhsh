@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-10",
+  "topic": "Agentic AI",
+  "sources": [
+    {
+      "type": "Official release",
+      "title": "langchain-ai/langgraph: sdk==0.4.14",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.14",
+      "date": "2026-11-06",
+      "note": "Changes since sdk==0.4.13 * release(sdk-py): 0.4.14 (#9610) * feat(sdk-py): add strict_resume to runs.create, stream and wait (#9599) * feat(sdk-py): add tools and lifecycle to StreamMode (#9601)"
+    }
+  ],
+  "warnings": [],
+  "mode": "source-linked",
+  "discussion_url": null
+}
