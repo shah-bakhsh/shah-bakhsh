@@ -48,11 +48,14 @@ def fetch(url, token="", payload=None):
 
 def plain(value, max_length=240):
     value = re.sub(r"<[^>]*>", " ", html.unescape(str(value or "")))
-    value = re.sub(r"\\s+", " ", value).strip()
+    value = re.sub(r"\s+", " ", value).strip()
     return value[:max_length] + ("…" if len(value) > max_length else "")
 
 def markdown(value):
-    return re.sub(r"([\\\\\x60*\\[\\]<>])", r"\\\1", str(value)).replace("\\n", " ")
+    value = str(value).replace("\n", " ")
+    for char in ("[", "]", "*", "<", ">", "`"):
+        value = value.replace(char, "\\" + char)
+    return value
 
 def sources_for(category, repo):
     sources, problems = [], []
@@ -100,7 +103,7 @@ def fallback_post(date, topic, sources):
         "- What would a useful open-source implementation or benchmark look like?", "",
         "---", "*Automatically published by SHAH.OS AI Presence Agent. Sources are linked; "
         "no personal experimentation or independent validation is implied.*", ""]
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 def write_post(date, topic, sources):
     if not KEY:
@@ -117,14 +120,14 @@ def write_post(date, topic, sources):
             "instructions": prompt,
             "input": json.dumps({"date": str(date), "topic": topic, "sources": sources}),
             "max_output_tokens": 1500})
-        output = "\\n".join(piece.get("text", "") for entry in response.get("output", [])
+        output = "\n".join(piece.get("text", "") for entry in response.get("output", [])
             for piece in entry.get("content", []) if piece.get("type") == "output_text")
-        urls = re.findall(r"https?://[^\\s)\\]>]+", output)
+        urls = re.findall(r"https?://[^\s)\\]>]+", output)
         allowed = {s["url"] for s in sources}
         if len(output) < 900 or not urls or any(u.rstrip(".,") not in allowed for u in urls):
             raise ValueError("AI output failed evidence screening")
-        return output + ("\\n\\n*AI-assisted post from cited research; not a claim of "
-                         "personal experimentation.*\\n"), "AI-assisted"
+        return output + ("\n\n*AI-assisted post from cited research; not a claim of "
+                         "personal experimentation.*\n"), "AI-assisted"
     except (urllib.error.URLError, ValueError, KeyError) as error:
         print("LLM generation unavailable or failed quality checks:", type(error).__name__)
         return fallback_post(date, topic, sources), "source-linked"
@@ -174,7 +177,7 @@ def propose_opportunities(date):
             if item.get("html_url"):
                 lines.append("- [" + markdown(plain(item.get("title"), 110)) +
                     "](" + item["html_url"] + ")")
-        path.write_text("\\n".join(lines) + "\\n", encoding="utf-8")
+        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     except (urllib.error.URLError, ValueError, KeyError) as err:
         print("Opportunity search skipped:", type(err).__name__)
 
@@ -200,11 +203,11 @@ def main(date=None):
     post.parent.mkdir(parents=True, exist_ok=True)
     state.parent.mkdir(parents=True, exist_ok=True)
     if discussion_url:
-        body = "> [Join the GitHub Discussion](" + discussion_url + ")\\n\\n" + body
+        body = "> [Join the GitHub Discussion](" + discussion_url + ")\n\n" + body
     post.write_text(body, encoding="utf-8")
     state.write_text(json.dumps({"date": str(date), "topic": topic, "sources": sources,
         "warnings": problems, "mode": mode, "discussion_url": discussion_url}, indent=2)
-        + "\\n", encoding="utf-8")
+        + "\n", encoding="utf-8")
     propose_opportunities(date)
     print("Daily post written:", post, "; source count:", len(sources),
           "; mode:", mode, "; discussion:", discussion_url or "not published")
