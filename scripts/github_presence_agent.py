@@ -104,38 +104,82 @@ def fallback_post(date, topic, sources):
         "no personal experimentation or independent validation is implied.*", ""]
     return "\n".join(lines)
 
+def gemini_models(key):
+    """List models accessible to this project; read-only call."""
+    request = urllib.request.Request(
+        "https://generativelanguage.googleapis.com/v1beta/models?pageSize=100",
+        headers={"x-goog-api-key": key,
+                 "User-Agent": "SHAH-OS-AI-Presence/1.0"})
+    with urllib.request.urlopen(request, timeout=35) as response:
+        result = json.load(response)
+    return [
+        item["name"].split("/")[-1]
+        for item in result.get("models", [])
+        if "generateContent" in item.get("supportedGenerationMethods", [])
+        and item.get("name", "").startswith("models/")
+    ]
+
+
 def gemini_generate(prompt, data):
-    """Use the Gemini standard REST API, without additional dependencies."""
+    """Use model discovery so removed/unavailable IDs don't break daily posts."""
     key = os.getenv("GEMINI_API_KEY", "")
     if not key:
         raise ValueError("GEMINI_API_KEY is not configured")
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
-    if not re.fullmatch(r"[a-zA-Z0-9._-]+", model):
+    preferred = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    if not re.fullmatch(r"[a-zA-Z0-9._-]+", preferred):
         raise ValueError("Invalid Gemini model name")
-    endpoint = (
-        "https://generativelanguage.googleapis.com/v1beta/models/"
-        + model + ":generateContent"
-    )
+    models = gemini_models(key)
+    # Prefer lightweight Gemini Flash models. Avoid preview/experimental and Pro
+    # models in this free-tier-focused workflow.
+    stable_flash = [m for m in models if "flash" in m.lower()
+                    and "preview" not in m.lower()
+                    and "exp" not in m.lower()
+                    and "image" not in m.lower()
+                    and "tts" not in m.lower()
+                    and "live" not in m.lower()]
+    priorities = [preferred, "gemini-2.5-flash-lite", "gemini-2.5-flash",
+                  "gemini-3.1-flash-lite", "gemini-3-flash"]
+    selected = []
+    for candidate in priorities + stable_flash:
+        if candidate in stable_flash and candidate not in selected:
+            selected.append(candidate)
+    if not selected:
+        raise RuntimeError("No compatible stable Gemini Flash text model available")
+    print("Gemini available Flash models:", ", ".join(selected[:6]))
     payload = {
         "systemInstruction": {"parts": [{"text": prompt}]},
         "contents": [{"role": "user", "parts": [
             {"text": json.dumps(data, ensure_ascii=False)}]}],
         "generationConfig": {"maxOutputTokens": 2500, "temperature": 0.4},
     }
-    request = urllib.request.Request(
-        endpoint, data=json.dumps(payload).encode("utf-8"), method="POST",
-        headers={"Content-Type": "application/json",
-                 "x-goog-api-key": key,
-                 "User-Agent": "SHAH-OS-AI-Presence/1.0"},
-    )
-    with urllib.request.urlopen(request, timeout=60) as response:
-        answer = json.load(response)
-    texts = []
-    for candidate in answer.get("candidates", []):
-        for part in (candidate.get("content") or {}).get("parts", []):
-            if not part.get("thought"):
-                texts.append(part.get("text", ""))
-    return "\n".join(texts).strip()
+    for model in selected[:5]:
+        request = urllib.request.Request(
+            "https://generativelanguage.googleapis.com/v1beta/models/"
+            + model + ":generateContent",
+            data=json.dumps(payload).encode("utf-8"), method="POST",
+            headers={"Content-Type": "application/json",
+                     "x-goog-api-key": key,
+                     "User-Agent": "SHAH-OS-AI-Presence/1.0"},
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                answer = json.load(response)
+        except urllib.error.HTTPError as error:
+            if error.code in (404, 429, 503):
+                print("Gemini model unavailable/limited:", model,
+                      "HTTP", error.code)
+                continue
+            raise
+        texts = []
+        for candidate in answer.get("candidates", []):
+            for part in (candidate.get("content") or {}).get("parts", []):
+                if not part.get("thought"):
+                    texts.append(part.get("text", ""))
+        output = "\n".join(texts).strip()
+        if output:
+            print("Gemini selected model:", model)
+            return output
+    raise RuntimeError("No available Gemini Flash model generated a response")
 
 
 def write_post(date, topic, sources):
