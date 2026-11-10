@@ -67,8 +67,25 @@ class PresenceTests(unittest.TestCase):
             return Response()
         with patch.dict(agent.os.environ,
                         {"GEMINI_API_KEY": "fake-test-key", "GEMINI_MODEL": "gemini-2.5-flash"}), \
+                patch.object(agent, "gemini_models", return_value=["gemini-2.5-flash"]), \
                 patch.object(agent.urllib.request, "urlopen", side_effect=check_request):
             self.assertEqual(agent.gemini_generate("Instructions", source), "hello")
+
+    def test_gemini_model_discovery_prefers_available_flash(self):
+        class FakeHTTPError(agent.urllib.error.HTTPError):
+            pass
+        import io
+        import json
+        def reply(req, timeout):
+            self.assertIn("gemini-2.5-flash-lite", req.full_url)
+            data = {"candidates": [{"content": {"parts": [{"text": "GEMINI_OK"}]}}]}
+            return io.BytesIO(json.dumps(data).encode())
+        with patch.dict(agent.os.environ, {
+            "GEMINI_API_KEY": "fake", "GEMINI_MODEL": "gemini-2.5-flash"}), \
+                patch.object(agent, "gemini_models",
+                    return_value=["gemini-2.5-flash-lite"]), \
+                patch.object(agent.urllib.request, "urlopen", side_effect=reply):
+            self.assertEqual(agent.gemini_generate("Test", {}), "GEMINI_OK")
 
     def test_duplicate_day_no_api_calls(self):
         with tempfile.TemporaryDirectory() as temp:
