@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-12",
+  "topic": "RAG Engineering",
+  "sources": [
+    {
+      "type": "Official release",
+      "title": "run-llama/llama_index: v0.14.25",
+      "url": "https://github.com/run-llama/llama_index/releases/tag/v0.14.25",
+      "date": "2026-09-21",
+      "note": "# Release Notes ## [2026-09-21] ### llama-index-agent-agentmesh [0.3.0] - fix: resolve a ton of security alerts ([#22855](https://github.com/run-llama/llama_index/pull/22855)) ### llama-index-agent-azure [0.4.0] - fix: resolve a ton of secu\u2026"
+    }
+  ],
+  "warnings": [],
+  "mode": "gemini-ai-assisted",
+  "discussion_url": "https://github.com/shah-bakhsh/shah-bakhsh/discussions/13"
+}
