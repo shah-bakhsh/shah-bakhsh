@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-13",
+  "topic": "ML Engineering",
+  "sources": [
+    {
+      "type": "Official release",
+      "title": "pytorch/pytorch: v2.15.0",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.15.0",
+      "date": "2026-10-28",
+      "note": "# PyTorch 2.15.0 Release Notes - [Highlights](#highlights) - [Backwards Incompatible Changes](#backwards-incompatible-changes) - [Deprecations](#deprecations) - [New Features](#new-features) - [Improvements](#improvements) - [Bug fixes](#bu\u2026"
+    }
+  ],
+  "warnings": [],
+  "mode": "gemini-ai-assisted",
+  "discussion_url": "https://github.com/shah-bakhsh/shah-bakhsh/discussions/14"
+}
