@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-14",
+  "topic": "Open Source AI",
+  "sources": [
+    {
+      "type": "Official release",
+      "title": "vllm-project/vllm: v0.33.0rc3",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
+      "date": "2026-11-02",
+      "note": "# v0.33.0 ## Highlights This release features 927 commits from 389 contributors (122 new)! * **New models**: Reflection Beam-1.0 (501B MoE, 23B active) with its DFlash2 drafter (#62074), Yandex AliceAI-Foundation-80B-A3B (#57963), Recursive\u2026"
+    }
+  ],
+  "warnings": [],
+  "mode": "gemini-ai-assisted",
+  "discussion_url": "https://github.com/shah-bakhsh/shah-bakhsh/discussions/15"
+}
