@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-17",
+  "topic": "Agentic AI",
+  "sources": [
+    {
+      "type": "Official release",
+      "title": "langchain-ai/langgraph: 1.2.22",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.22",
+      "date": "2026-11-14",
+      "note": "Changes since 1.2.21 * release(langgraph): 1.2.22 (#9702) * release(checkpoint-postgres): 3.2.1 (#9700) * release(prebuilt): 1.1.2 (#9701) * release(checkpoint): 4.3.2 (#9699) * fix(langgraph): stream a child graph on its own thread to a ca\u2026"
+    }
+  ],
+  "warnings": [],
+  "mode": "gemini-ai-assisted",
+  "discussion_url": "https://github.com/shah-bakhsh/shah-bakhsh/discussions/18"
+}
