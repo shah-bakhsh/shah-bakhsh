@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-24",
+  "topic": "Agentic AI",
+  "sources": [
+    {
+      "type": "Official release",
+      "title": "langchain-ai/langgraph: 1.2.24",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.24",
+      "date": "2026-11-20",
+      "note": "Changes since 1.2.23 * release(langgraph): 1.2.24 (#9752) * fix(langgraph): handle `REMOVE_ALL_MESSAGES` in `_messages_delta_reducer` and `None` checkpoints in `DeltaChannel` (#9735)"
+    }
+  ],
+  "warnings": [],
+  "mode": "gemini-ai-assisted",
+  "discussion_url": "https://github.com/shah-bakhsh/shah-bakhsh/discussions/25"
+}
