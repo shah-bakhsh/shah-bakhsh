@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-25",
+  "topic": "Low-resource NLP",
+  "sources": [
+    {
+      "type": "Official release",
+      "title": "huggingface/transformers: v5.24.1",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.24.1",
+      "date": "2026-11-24",
+      "note": "# Patch release v5.24.1 A patch to fix a bunch of stuff for vLLM, a few distributed issues, and some model fixes (llama4, dory); see the full list ### vLLM related - Fix backward compatibility of the cache rename for remote code (#51085) by\u2026"
+    }
+  ],
+  "warnings": [],
+  "mode": "gemini-ai-assisted",
+  "discussion_url": "https://github.com/shah-bakhsh/shah-bakhsh/discussions/26"
+}
